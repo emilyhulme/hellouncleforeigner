@@ -1,0 +1,352 @@
+/*style sheet for Hello Uncle Foreigner redesign, October 2016" */
+/* Styles reset
+   Based on:
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Global color, text variables for Hello Uncle Foreigner */
+@font-face {
+  font-family: Spartan;
+  src: url(league-spartan-master/_webfonts/leaguespartan-bold.woff); }
+@font-face {
+  font-family: League Gothic;
+  src: url(league-gothic/webfonts/leaguegothic-regular-webfont.woff); }
+/* Layout basics for Hello Uncle Foreigner */
+body {
+  background-color: #EDEBBC;
+  margin: 0 auto 20px auto;
+  width: 90%; }
+
+@media only screen and (min-width: 545px) {
+  body {
+    width: 80%; } }
+html {
+  font-size: 10px; }
+
+@media only screen and (min-width: 700px) {
+  font-size: 13px; }
+@media only screen and (min-width: 760px) {
+  html {
+    font-size: 14px; } }
+@media only screen and (min-width: 860px) {
+  html {
+    font-size: 16px; } }
+/* All textual relative size and color styling */
+h1, h2, h3, h4, h5, h6, p, a, li, figcaption {
+  color: #451118; }
+
+p, a {
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif; }
+
+h1, h2, h3, h4, h5, h6, figcaption, .date, .topNav li, .articleFoot-tags li {
+  font-family: Spartan; }
+
+figcaption {
+  font-family: "League Gothic"; }
+
+a, a:active, a:visited {
+  text-decoration: none; }
+
+a {
+  color: #1181B2; }
+
+a:visited {
+  color: #FF2546; }
+
+header li, .articleFoot-tags li, footer li {
+  display: inline; }
+
+h2 {
+  font-size: 1.953em; }
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.5em; }
+
+.topNav li {
+  font-size: 1.5em; }
+
+@media only screen and (min-width: 1050px) {
+  .topNav li {
+    font-size: 1.953em; }
+
+  .topNav {
+    margin-top: -.262em; } }
+p {
+  font-size: 1.25em;
+  margin-bottom: .64em;
+  line-height: 1.1em; }
+
+.articleFoot-tags li, .date {
+  font-size: .64em; }
+
+.articleFoot-tags li {
+  margin-right: .64em; }
+
+figcaption {
+  font-size: 1em;
+  margin-bottom: 1em;
+  line-height: 1.25em; }
+
+/* image handling, much of this is legacy code */
+img {
+  background-color: #EDEBBC;
+  padding: 1px;
+  border: 1px solid #451118;
+  margin-bottom: .64em; }
+
+.right {
+  float: right;
+  margin-left: 2.5%; }
+
+.left {
+  float: left;
+  margin-right: 2.5%; }
+
+.Group {
+  margin-top: 5px; }
+
+.Group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.small, .med, .large, .half {
+  display: none; }
+
+@media only screen and (min-width: 470px) {
+  .small, .med, .large, .half {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+  .small {
+    width: 32%; }
+
+  .med {
+    width: 42%; }
+
+  .large {
+    width: 65%; }
+
+  .half {
+    width: 50%; } }
+.Xlarge {
+  width: 100%;
+  margin-bottom: .6em; }
+
+/* Header styling */
+.topNav {
+  margin-bottom: -0.1em;
+  float: left; }
+
+@media only screen and (min-width: 545px) {
+  .topNav {
+    margin-bottom: 1em; } }
+.topNav li {
+  margin-right: 1em; }
+
+header {
+  padding-bottom: 3.5em;
+  margin-bottom: 2em;
+  border-bottom: solid 5px #451118;
+  position: relative; }
+
+@media only screen and (min-width: 545px) {
+  header {
+    padding-bottom: 2em; } }
+@media only screen and (min-width: 1050px) {
+  header {
+    padding-bottom: 2.5em; } }
+header:after {
+  content: '';
+  border-bottom: solid 2px #451118;
+  width: 100%;
+  position: absolute;
+  bottom: -15px;
+  left: 0; }
+
+.header-social a, .header-social a:active, .header-social a:visited {
+  color: #451118; }
+
+.header-social li {
+  font-size: .9em; }
+
+.header-social li .fa {
+  font-size: 1.2em; }
+
+.header-social {
+  margin-top: .262em; }
+
+/* Footer styling */
+footer {
+  padding-top: 1.5em;
+  margin-top: 2em;
+  border-top: solid 5px #451118;
+  position: relative; }
+
+footer:before {
+  content: '';
+  border-top: solid 2px #451118;
+  width: 100%;
+  position: absolute;
+  top: -15px;
+  left: 0; }
+
+.footer-col h4 {
+  margin-bottom: .262em; }
+
+.footer-about {
+  width: 40%;
+  float: left;
+  margin-right: 10%;
+  margin-bottom: 40px; }
+
+.footer-list {
+  width: 45%;
+  float: left;
+  margin-bottom: 1em; }
+
+@media only screen and (min-width: 495px) {
+  .footer-about {
+    width: 30%;
+    margin-right: 40px; }
+
+  .footer-list {
+    width: 30%; } }
+@media only screen and (min-width: 815px) {
+  .footer-about {
+    width: 40%;
+    margin-right: 50px; }
+
+  .footer-list {
+    width: 23%;
+    float: left;
+    margin-right: 20px; } }
+.footer-list ul {
+  list-style: circle; }
+
+.footer-list li {
+  display: list-item;
+  font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif;
+  font-size: 1.25em;
+  line-height: 1.2em; }
+
+.footer-credits div {
+  width: 50%;
+  margin: 2em 0;
+  font-size: .64em; }
+
+.footer-credits .copyright {
+  float: left; }
+.footer-credits .drupal {
+  float: right;
+  text-align: right; }
+
+/* All header breakpoint styling comes at the end of the cascade
+Body breakpoints, changing em value, is done in _layout.scss */
+h1 {
+  font-size: 2.441em; }
+
+.logo {
+  position: relative; }
+
+.header-social {
+  float: left; }
+
+.header-social li {
+  margin-right: .2em; }
+
+.topNav {
+  width: 100%; }
+
+@media only screen and (min-width: 425px) {
+  h1 {
+    font-size: 3.052em; } }
+@media only screen and (min-width: 545px) {
+  h1 {
+    font-size: 3.815em; }
+
+  .header-social {
+    position: absolute;
+    left: 350; } }
+@media only screen and (min-width: 760px) {
+  .header-social {
+    left: 490; } }
+@media only screen and (min-width: 860px) {
+  .header-social {
+    left: 560; } }
+@media only screen and (min-width: 1050px) {
+  h1 {
+    font-size: 4.768em; }
+
+  .header-social {
+    left: 700; }
+
+  .header-social li {
+    margin-right: .4em; } }
+@media only screen and (min-width: 1310px) {
+  h1 {
+    font-size: 5.96em; }
+
+  .header-social {
+    left: 870; }
+
+  .header-social li {
+    margin-right: .8em; } }
+
+/*# sourceMappingURL=styles.css.map */
